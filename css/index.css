@@ -16,7 +16,8 @@ body {
     background: #ffffff;
     z-index: 1;
     border-radius: 10px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
     padding: 10px 10px 20px 10px;
   }
   .popMenu::before {
@@ -122,9 +123,12 @@ body {
   }
   .headerContainer {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     /*將容器設為flex*/
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     max-width: 1280px;
     /*限制容器最大寬度可避免螢幕過大元件無限變寬*/
     /*使容器寬度等於最大寬大１２８０px*/
@@ -132,7 +136,8 @@ body {
     /*置中margin自動分配*/
   }
   .logo {
-    flex-basis: 310px;
+    -ms-flex-preferred-size: 310px;
+        flex-basis: 310px;
     /*flex子項寬度*/
     background-color: white;
     height: 59px;
@@ -142,13 +147,16 @@ body {
     height: 40px;
   }
   .menu {
-    flex-basis: 794px;
+    -ms-flex-preferred-size: 794px;
+        flex-basis: 794px;
     /*flex子項寬度*/
     background-color: white;
     height: 59px;
     line-height: 59px;
   }
   .menu ul li {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     padding: 0px 20px;
     font-size: 15px;
@@ -226,7 +234,8 @@ body {
     color: #5eb559;
   }
   .login {
-    flex-basis: 150px;
+    -ms-flex-preferred-size: 150px;
+        flex-basis: 150px;
     /*flex子項寬度*/
     background-color: #f58400;
     height: 59px;
@@ -252,10 +261,16 @@ body {
   }
   .bannerContainer {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow: hidden;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .bannerContainer img {
     height: 500px;
@@ -267,9 +282,12 @@ body {
     opacity: 0.3;
     z-index: 2;
     background: white;
+    background-image: -webkit-gradient(linear, left top, right top, from(#f83600), to(#f9d423));
     background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#e14fad), to(#f9d423));
     background-image: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
     background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#fa709a), to(#fee140));
     background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   }
   .champBannerImg {
@@ -291,9 +309,14 @@ body {
   }
   .textCover {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     z-index: 2;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .imageCoverTitle {
     text-align: center;
@@ -316,9 +339,14 @@ body {
     min-height: 720px;
     padding: 70px;
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .champ .champContainer .champCard1 {
     width: 350px;
@@ -326,7 +354,8 @@ body {
     background: white;
     margin: 20px;
     padding: 30px;
-    box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
+            box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
     border-radius: 3px;
   }
   .champ .champContainer .champCard1 .champCard1Title {
@@ -339,8 +368,12 @@ body {
   .champ .champContainer .champCard1 .champCard1Sub {
     text-align: center;
     padding: 30px 0px 40px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-weight: 450;
     font-size: 18px;
   }
@@ -358,7 +391,8 @@ body {
     background: white;
     margin: 20px;
     padding: 30px;
-    box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
+            box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
     border-radius: 3px;
   }
   .champ .champContainer .champCard2 .champCard2Title {
@@ -373,13 +407,21 @@ body {
     font-size: 18px;
     text-align: left;
     padding: 20px 0px 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-weight: 450;
   }
   .champ .champContainer .champCard2 .card2Detail1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 10px;
   }
   .champ .champContainer .champCard2 .card2Detail1 .card2DetailFF {
@@ -440,7 +482,8 @@ body {
     margin: 20px;
     background: white;
     border-radius: 3px;
-    box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
+            box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
   }
   .champ .champContainer .champCard3 .champCard3Title {
     background: #CB371A;
@@ -454,8 +497,12 @@ body {
     font-size: 18px;
     text-align: left;
     padding: 20px 0px 30px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-weight: 450;
   }
   .champ .champContainer .champCard3 ul {
@@ -469,10 +516,19 @@ body {
   }
   .champFooter .champFooterContainer {
     height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .champFooter .champFooterContainer p {
     margin-bottom: 0px;
@@ -506,36 +562,63 @@ body {
     z-index: 50;
     top: 0;
     right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .header .menuPhone {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     width: 44px;
     height: 44px;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: orange;
     background: white;
   }
   .overlaymenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: absolute;
     background: #ffffff;
     height: 100vh;
     width: 100vw;
     margin-top: -100vh;
     z-index: 100;
+    -webkit-transition: 0.6s;
     transition: 0.6s;
   }
   .overlaymenu p {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    align-items: baseline;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     width: 160px;
     margin-top: 10px;
   }
@@ -558,6 +641,8 @@ body {
     color: green;
   }
   .logoPhone {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
   }
   .logoPhone img {
@@ -565,9 +650,15 @@ body {
     height: 44px;
   }
   .header .logoutPhone {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 44px;
     height: 44px;
     color: whitesmoke;
@@ -579,7 +670,8 @@ body {
   .popMenuPhone {
     display: block;
     position: fixed;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
     top: 50px;
     right: 10px;
     border-radius: 10px;
@@ -652,10 +744,16 @@ body {
   }
   .bannerContainer {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow: hidden;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .bannerContainer img {
     height: 400px;
@@ -671,7 +769,10 @@ body {
   .textCover {
     position: absolute;
     z-index: 2;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .imageCoverTitle {
     text-align: center;
@@ -702,6 +803,7 @@ body {
     width: 40%;
     top: 50%;
     left: 0%;
+    background: -webkit-gradient(linear, right top, left top, from(#00ac28), to(#dbffdb));
     background: linear-gradient(-90deg, #00ac28, #dbffdb);
   }
   .lastNews::after {
@@ -711,6 +813,7 @@ body {
     width: 40%;
     top: 50%;
     right: 0%;
+    background: -webkit-gradient(linear, right top, left top, from(#dbffdb), to(#00ac28));
     background: linear-gradient(-90deg, #dbffdb, #00ac28);
   }
   .cardContainer {
@@ -718,13 +821,20 @@ body {
     max-width: 1024px;
     margin: auto;
     padding: 20px 0px 20px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .cardContainer > div {
-    flex-basis: 30%;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
     position: relative;
     height: 300px;
     margin: 10px 5px 0px 5px;
@@ -737,13 +847,18 @@ body {
     background-position: center center;
     border-radius: 3px;
     background-repeat: no-repeat;
-    filter: grayscale(60%);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    -webkit-filter: grayscale(60%);
+            filter: grayscale(60%);
+    -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
   .cardContainer > div > a:hover {
-    box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
-    filter: grayscale(0%);
+    -webkit-box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
   }
   .cardContainer > div > .cardSubInfo {
     width: 100%;
@@ -756,17 +871,22 @@ body {
     bottom: 0px;
   }
   .cardContainer .cardText {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-top: 10px;
   }
   .cardContainer .cardText .cardTitle {
     margin: 0;
     padding-top: 5px;
-    flex-basis: 80%;
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
   }
   .cardContainer .cardText .cardLoveButton {
-    flex-basis: 20%;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
     font-size: 35px;
     text-align: right;
     color: grey;
@@ -818,36 +938,63 @@ body {
     position: fixed;
     z-index: 50;
     top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .header .menuPhone {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     width: 44px;
     height: 44px;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: orange;
     background: white;
   }
   .overlaymenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: absolute;
     background: #ffffff;
     height: 100vh;
     width: 100vw;
     margin-top: -100vh;
     z-index: 100;
+    -webkit-transition: 0.6s;
     transition: 0.6s;
   }
   .overlaymenu p {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    align-items: baseline;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     width: 160px;
     margin-top: 5px;
   }
@@ -870,6 +1017,8 @@ body {
     color: green;
   }
   .logoPhone {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
   }
   .logoPhone img {
@@ -877,9 +1026,15 @@ body {
     height: 44px;
   }
   .header .logoutPhone {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 44px;
     height: 44px;
     color: whitesmoke;
@@ -891,7 +1046,8 @@ body {
   .popMenuPhone {
     display: block;
     position: fixed;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
     top: 50px;
     right: 10px;
     border-radius: 10px;
@@ -963,9 +1119,15 @@ body {
   }
   .bannerContainer {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .bannerContainer img {
     height: 200px;
@@ -977,9 +1139,12 @@ body {
     opacity: 0.3;
     z-index: 2;
     background: white;
+    background-image: -webkit-gradient(linear, left top, right top, from(#f83600), to(#f9d423));
     background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#e14fad), to(#f9d423));
     background-image: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
     background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#fa709a), to(#fee140));
     background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   }
   .champBannerImg {
@@ -1007,9 +1172,14 @@ body {
     min-height: 920px;
     padding: 10px;
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .champ .champContainer .champCard1 {
     width: 350px;
@@ -1017,7 +1187,8 @@ body {
     background: white;
     margin: 20px;
     padding: 30px;
-    box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
+            box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
     border-radius: 3px;
   }
   .champ .champContainer .champCard1 .champCard1Title {
@@ -1031,8 +1202,12 @@ body {
     text-align: center;
     font-size: 18px !important;
     padding: 30px 10px 40px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-weight: 450;
   }
   .champ .champContainer .champCard1 .champCard1Context {
@@ -1049,7 +1224,8 @@ body {
     background: white;
     margin: 20px;
     padding: 30px;
-    box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
+            box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
     border-radius: 3px;
     position: relative;
   }
@@ -1065,13 +1241,21 @@ body {
     font-size: 18px;
     text-align: left;
     padding: 20px 0px 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-weight: 450;
   }
   .champ .champContainer .champCard2 .card2Detail1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 10px;
   }
   .champ .champContainer .champCard2 .card2Detail1 .card2DetailFF {
@@ -1133,7 +1317,8 @@ body {
     margin: 20px;
     background: white;
     border-radius: 3px;
-    box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
+            box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.4);
   }
   .champ .champContainer .champCard3 .champCard3Title {
     background: #CB371A;
@@ -1147,8 +1332,12 @@ body {
     font-size: 18px;
     text-align: left;
     padding: 20px 0px 40px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-weight: 450;
   }
   .champ .champContainer .champCard3 ul {
@@ -1162,10 +1351,19 @@ body {
   }
   .champFooter .champFooterContainer {
     height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .champFooter .champFooterContainer p {
     margin-bottom: 0px;
@@ -1185,9 +1383,14 @@ body {
   }
   .textCover {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     z-index: 2;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .imageCoverTitle {
     text-align: center;
@@ -1203,9 +1406,14 @@ body {
   }
   .textCover {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     z-index: 2;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .imageCoverTitle {
     text-align: center;
@@ -1240,8 +1448,13 @@ body {
     max-width: 990px;
     margin: auto;
     padding: 0px 20px 0px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   /*cell*/
   .cardContainer > div {
@@ -1260,13 +1473,18 @@ body {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    filter: grayscale(60%);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    -webkit-filter: grayscale(60%);
+            filter: grayscale(60%);
+    -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
   .cardContainer > div > a:hover {
-    box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
-    filter: grayscale(0%);
+    -webkit-box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
   }
   /*積分、名額*/
   .cardContainer .cardSubInfo {
@@ -1276,8 +1494,11 @@ body {
     left: 150px;
   }
   .cardContainer .cardSubInfo span {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     font-size: 0.9rem;
     margin-bottom: 10px;
   }
@@ -1319,3 +1540,4 @@ body {
   }
   /*popover*/
 }
+/*# sourceMappingURL=index.css.map */
